@@ -13,7 +13,7 @@ import com.sqa.rd.helpers.exceptions.*;
 public class ApachePOITestJ {
 	@DataProvider
 	public Object[][] getData() {
-		Object[][] data = DataHelperPOI.getExcelFileData("src/main/resources/", "calc-area-dp.xlsx", true);
+		Object[][] data = DataHelperPOI.getExcelFileData("src/main/resources/", "calc-area-dp.xls", true);
 		DisplayHelper.multArray(data);
 		return data;
 	}

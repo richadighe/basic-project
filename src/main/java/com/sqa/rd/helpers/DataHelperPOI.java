@@ -13,8 +13,8 @@ package com.sqa.rd.helpers;
 import java.io.*;
 import java.util.*;
 
+import org.apache.poi.hssf.usermodel.*;
 import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.*;
 
 /**
  * DataHelper //ADDD (description of class)
@@ -54,12 +54,12 @@ public class DataHelperPOI {
 			// Get the workbook instance for XLS file or XML (Must use the
 			// HSSFWorkbook for old format
 			@SuppressWarnings("resource")
-			// HSSFWorkbook workbook = new HSSFWorkbook(newExcelFormatFile);
-			XSSFWorkbook workbook = new XSSFWorkbook(newExcelFormatFile);
+			HSSFWorkbook workbook = new HSSFWorkbook(newExcelFormatFile);
+			// XSSFWorkbook workbook = new XSSFWorkbook(newExcelFormatFile);
 
 			// Get first sheet from the workbook, HSSF for old format
-			// HSSFSheet sheet = workbook.getSheetAt(0);
-			XSSFSheet sheet = workbook.getSheetAt(0);
+			HSSFSheet sheet = workbook.getSheetAt(0);
+			// XSSFSheet sheet = workbook.getSheetAt(0);
 			// Iterate through each rows from first sheet
 			Iterator<Row> rowIterator = sheet.iterator();
 
